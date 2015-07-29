@@ -1,4 +1,3 @@
-
 //<img src="tomato.svg">
 if (!Modernizr.svg) {
   var imgs = document.getElementsByTagName('img');
