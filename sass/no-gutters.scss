@@ -1,0 +1,15 @@
+
+/*http://julienmelissas.com/no-gutter-column-trick-for-bootstrap/*/
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > [class^="col-"],
+  > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/*much better with the mixins*/
+.kitten-box { @make-sm-column(3,0); }
