@@ -1,0 +1,150 @@
+# Angular HTML
+snippet rep
+	div(ng-repeat='${1} in ${2}')
+
+snippet repf
+	div(ng-repeat='${1} in ${2}' | ${3})
+
+snippet repi
+	div(ng-repeat='${1} in ${2}' track by $index)
+
+snippet hide
+	div(ng-hide='${1}')
+
+snippet show
+	div(ng-show='${1}')
+
+snippet if
+	div(ng-if='${1}')
+
+snippet html
+	doctype html
+	html(lang='en')
+		head
+			meta(name="viewport", content="width=device-width, initial-scale=1)
+			title ${1:title text}
+		body
+
+snippet script
+	script(type='text/javascript' src='${1:link}')
+ 
+snippet link
+	link(href='${1:link}', rel='stylesheet')
+
+snippet img
+	img(src='${1:link image}, alt='${2:image empty})${3:.img-rounded/.img-circle/.img-thumbnail}
+
+snippet button
+	button(type='${1}').${2:class}
+
+snippet btn
+	button(type='submit').btn.btn-default${1:.btn-xs/.btn-sm/.btn-lg/empty}${2:.btn-block}
+
+snippet href
+	a(href='${1:link}') ${2:text}
+
+snippet checkbox
+	input(type='checkbox', checked='${1}')
+
+snippet radio
+	div.radio
+	  label
+			input(type='radio', name='${1}', value='${2}' checked)${3:.input-lg/.input-sm/empty}
+			${4:text}
+
+snippet input
+	input(type='${1}' value='${2}' placeholder='${3}').form-control${4:.input-lg/.input-sm/empty}
+
+snippet submit
+	input(type='submit' value='${1}' class='${2}').btn.btn-default${3:.input-lg/.input-sm/empty}
+
+snippet select
+	select.form-control
+	  option ${1:text}
+	  option ${2:text}
+	  option ${3:text}
+
+snippet textarea
+	textarea(rows='4').form-control
+				
+snippet form-block
+	form
+	  .form-group
+		  label(for='${1}')
+			input(type='${2}', name='${3}, placeholder='${4}').form-control${5:.input-lg/.input-sm/empty}
+			p.help-block ${6:text}
+
+snippet form-inline
+	form.form-inline
+	  .form-group
+		  label(for='${1}')
+			input(type='${2}', name='${3}, placeholder='${4}').form-control${5:.input-lg/.input-sm/empty}
+			p.help-block ${6:text}
+
+snippet list
+	ul${1:.list-inline/.list-unstyled/.list-group/list}
+		li${2:.list__item/.list-group-item}
+
+snippet badge
+	ul.list-group
+		li.list-group-item
+		  span.badge ${1:number}
+			${2:text}
+
+snippet dl
+	dl
+		dt.${1:class}
+		dd.${2:class}
+
+snippet container
+	div.container
+		div.row
+		  div.col-${1}-${2}
+			
+snippet row
+	div.row
+		div.col-${1}-${2}
+			
+snippet col
+		div.col-${1}-${2}
+
+snippet col4
+		div.col-${1}-3 
+		div.col-${2}-3 
+		div.col-${3}-3 
+		div.col-${4}-3 
+		
+snippet col4
+		div.col-${1}-4 
+		div.col-${2}-4 
+		div.col-${3}-4 
+		
+snippet col6
+		div.col-${1}-6 
+		div.col-${2}-6 
+
+snippet col8
+		div.col-${1}-8 
+		div.col-${2}-4 
+
+snippet col9
+		div.col-${1}-9 
+		div.col-${2}-3 
+
+snippet col12
+		div.col-${1}-12 
+
+snippet tabs
+		ul.nav.${1:nav-tabs/nav-pills/nav-justified}
+		  li(role='${1:presentation}').active
+			  a(href='${2:link}') ${3:text} 
+		  li(role='${4:presentation}')
+			  a(href='${5:link}') ${6:text} 
+		  li(role='${7:presentation}').disabled
+			  a(href='${8:link}') ${9:text} 
+
+snippet mixin
+	//- Declaration
+	mixin ${1}
+	  ${2}
+	//- Use +nameMixin 

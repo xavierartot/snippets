@@ -1,0 +1,340 @@
+# Plugin vim-ultisnips-css
+# don't forget to use it with number: m5, pb2e...
+# Edit this and run `rake`.
+# Each section can contain:
+#
+# formats - an array of formats that the snippet will be included in.
+# options - directs how the block will be transformed.
+#
+# These `formats` are available: css, scss, sass, stylus.
+#
+# Snippets will be transformed accordingly:
+#
+# - For braced languages (css, scss), media queries will add a `{` after `)`.
+# - For languages that support slash comments (not css), `/* ... */` will be
+#   turned into `// ...`.
+# - For indented languages (sass, stylus), semicolons will be removed.
+
+simple: # Snippets that will expand.
+  formats: [ scss, css, sass, stylus ]
+  snippets:
+    moa: "margin: 0 auto;"
+    m0a: "margin: 0 auto;"
+
+    mopo: "margin: 0; padding: 0;"
+    m0p0: "margin: 0; padding: 0;"
+
+    m#: "margin: {#};"
+    p#: "padding: {#};"
+    b#: "border: {#};"
+
+    bs: "box-shadow: {x y blur spead color}"
+    brad: "border-radius: {3}"
+    brad#: "border-radius: {#};"
+
+    w: "width: {0}"
+    h: "height: {0}"
+    w100: "width: 100%;"
+    wa: "width: auto;"
+    h100: "height: 100%;"
+    wh: "width: {0}; height: {0};"
+    mh: "min-height: {100%}"
+    mw: "min-width: {100%}"
+    mah: "max-height: {none}"
+    maw: "max-width: {none}"
+
+    w#: "width: {#};"
+    h#: "height: {#};"
+
+    m:  "margin: {0};"
+    mt: "margin-top: {0};"
+    mb: "margin-bottom: {0};"
+    ml: "margin-left: {0};"
+    mr: "margin-right: {0};"
+
+    mt#: "margin-top: {#};"
+    mb#: "margin-bottom: {#};"
+    ml#: "margin-left: {#};"
+    mr#: "margin-right: {#};"
+
+    p:  "padding: {0};"
+    pt: "padding-top: {0};"
+    pb: "padding-bottom: {0};"
+    pl: "padding-left: {0};"
+    pr: "padding-right: {0};"
+
+    p#:  "padding: {#};"
+    pt#: "padding-top: {#};"
+    pb#: "padding-bottom: {#};"
+    pl#: "padding-left: {#};"
+    pr#: "padding-right: {#};"
+
+    b:  "border: {solid 1px #333};"
+    bt: "border-top: {solid 1px #333};"
+    bb: "border-bottom: {solid 1px #333};"
+    bl: "border-left: {solid 1px #333};"
+    br: "border-right: {solid 1px #333};"
+
+    bt#: "border-top: {#};"
+    bb#: "border-bottom: {#};"
+    bl#: "border-left: {#};"
+    br#: "border-right: {#};"
+
+    bcc: "border-collapse: collapse;"
+
+    bg: "background: {#fff url(image.png) no-repeat left top fixed};"
+    bgp: "background-position: {x y};"
+    bgi: "background-image: {url()};"
+    bgc: "background-color: {transparent};"
+    bgr: "background-repeat: {no-repeat};"
+
+    bpos: "background-position: {x y};"
+    bp:   "background-position: {x y};"
+
+    brx:  "background-repeat: repeat-x;"
+    bry:  "background-repeat: repeat-y;"
+    bgrx: "background-repeat: repeat-x;"
+    bgry: "background-repeat: repeat-y;"
+    brn:  "background-repeat: no-repeat;"
+    bgrn: "background-repeat: no-repeat;"
+
+    bga:  "background-attachment: {scroll|fixed|local}"
+    bgas: "background-attachment: scroll;"
+    bgaf: "background-attachment: fixed;"
+    bgal: "background-attachment: local;"
+
+    bgs:  "background-size: {auto};"
+    bgsc: "background-size: cover;"
+    bgst: "background-size: contain;"
+    bgsa: "background-size: auto;"
+    bgcover: "background-size: cover;"
+
+    bgclip: "background-clip: {border-box|padding-box|content-box};"
+    bgcc:   "background-clip: content-box;"
+    bgcp:   "background-clip: padding-box;"
+    bgcb:   "background-clip: border-box;"
+
+    f:    "font: {italic bold 1em/1.5em serif};"
+    font: "font: {italic bold 1em/1.5em serif};"
+
+    ff: "font-family: {sans-serif};"
+    fz: "font-size: {1em};"
+    lh: "line-height: {1.5};"
+    ls: "letter-spacing: {0};"
+    hlh: "height: {0px}; line-height: {1.5};"
+
+    fn: "float: none;"
+    fl: "float: left;"
+    fr: "float: right;"
+
+    co: "color: {#333};"
+
+    cl: "clear: left;"
+    cr: "clear: right;"
+    cb: "clear: both;"
+
+    cd: "cursor: default;"
+    cp: "cursor: pointer;"
+    ct: "cursor: text;"
+
+    cu:   "cursor: {default|pointer|text};"
+    cut:  "cursor: text;"
+    cup:  "cursor: pointer;"
+    cud:  "cursor: default;"
+    cuna: "cursor: not-allowed;"
+    cuew: "cursor: ew-resize;"
+    cuns: "cursor: ns-resize;"
+
+    d:   "display: {none|inline|block};"
+    di:  "display: inline;"
+    dn:  "display: none;"
+    db:  "display: block;"
+    dib: "display: inline-block;"
+    dt:  "display: table;"
+    dtc: "display: table-cell;"
+    dtr: "display: table-row;"
+
+    fsn: "font-style: normal;"
+    fsi: "font-style: italic;"
+    italic: "font-style: italic;"
+
+    fwn:  "font-weight: normal;"
+    fwb:  "font-weight: bold;"
+    bold: "font-weight: bold;"
+
+    fw1:  "font-weight: 100;"
+    fw3:  "font-weight: 300;"
+    fw4:  "font-weight: 400;"
+    fw5:  "font-weight: 500;"
+    fw7:  "font-weight: 700;"
+    fw9:  "font-weight: 900;"
+
+    f1:  "font-weight: 100;"
+    f3:  "font-weight: 300;"
+    f4:  "font-weight: 400;"
+    f5:  "font-weight: 500;"
+    f7:  "font-weight: 700;"
+    f9:  "font-weight: 900;"
+
+    fi:   "font-style: italic;"
+    fn:   "font-weight: normal;"
+    fb:   "font-weight: bold;"
+
+    va:  "vertical-align: {top|bottom|baseline|middle};"
+    vat:  "vertical-align: top;"
+    vab:  "vertical-align: bottom;"
+    vabl: "vertical-align: baseline;"
+    vam:  "vertical-align: middle;"
+
+    v: "visibility: {visible|hidden|collapse};"
+    vh: "visibility: hidden;"
+    vv: "visibility: visible;"
+    vc: "visibility: collapse;"
+
+    tt:  "text-transform: {capitalize|uppercase|lowercase};"
+    ttu: "text-transform: uppercase;"
+    ttl: "text-transform: lowercase;"
+    ttc: "text-transform: capitalize;"
+
+    td:   "text-decoration: {none|underline|strikethrough};"
+    tdu:  "text-decoration: underline;"
+    tdn:  "text-decoration: none;"
+    tdlt: "text-decoration: line-through;"
+
+    ti: "text-indent: {0};"
+
+    ts: "text-shadow: {0 1px 0 #333};"
+
+    o:  "overflow: {hidden|auto|scroll};"
+    os: "overflow: scroll;"
+    oh: "overflow: hidden;"
+    oa: "overflow: auto;"
+
+    oxs: "overflow-x: scroll;"
+    oxh: "overflow-x: hidden;"
+    oxa: "overflow-x: auto;"
+
+    oys: "overflow-y: scroll;"
+    oyh: "overflow-y: hidden;"
+    oya: "overflow-y: auto;"
+
+    ta:  "text-align: {left|right|center|justify};"
+    tar: "text-align: right;"
+    tal: "text-align: left;"
+    tac: "text-align: center;"
+    taj: "text-align: justify;"
+
+    poa: "position: absolute;"
+    pof: "position: fixed;"
+    por: "position: relative;"
+    pos: "position: static;"
+
+    l: "left: {0};"
+    r: "right: {0};"
+    l#: "left: {#};"
+    r#: "right: {#};"
+
+    t: "top: {0};"
+    b: "bottom: {0};"
+    t#: "top: {#};"
+    b#: "bottom: {#};"
+
+    lt: "left: {0}; top: {0};"
+    lb: "left: {0}; bottom: {0};"
+    rt: "right: {0}; top: {0};"
+    rb: "right: {0}; bottom: {0};"
+
+    zi: "z-index: {1};"
+
+    tl:  "table-layout: {fixed|auto}"
+    tlf: "table-layout: fixed;"
+    tla: "table-layout: auto;"
+
+    hov: "&:hover"
+    act: "&:active"
+
+
+# ----------------------------------------------------------------------------
+expressions: # Things that are not properties
+
+  formats: [ scss, css, sass, stylus ]
+  snippets:
+    nr: "no-repeat;"
+    rx: "repeat-x;"
+    ry: "repeat-y;"
+    ra: "rgba({0, 0, 0}, {0.5});"
+
+# ----------------------------------------------------------------------------
+colors:
+  formats: [ scss, sass, scss, stylus ]
+  snippets:
+    rb: "rgba(black, {0.2})"
+    rw: "rgba(white, {0.2})"
+
+# ----------------------------------------------------------------------------
+sass-mixins:
+  formats: [ sass, scss ]
+  snippets:
+    cf: "+clearfix"
+
+# ----------------------------------------------------------------------------
+stylus-mixins:
+  formats: [ stylus ]
+  snippets:
+    cf: "clearfix()"
+
+# ----------------------------------------------------------------------------
+media: # Presets for media queries
+
+  #                           xs         sm              md             lg
+  #                   480         768          992                1200
+  #              '     '     '     '     '     '     '     '     '     '     '
+  #                    '           '           '                 '
+  # portrait    <------^           '           '                 '
+  # phone       <------------------^           '                 '
+  # mobile      <------------------------------^                 '
+  # nondesktop  <------------------------------------------------^
+  # tablet                         ^---------------------------------------->
+  # laptop                                     ^---------------------------->
+  # desktop                                                      ^---------->
+
+  formats: [ scss, css, sass, stylus ]
+  snippets:
+    "@portrait":   "@media (max-width: 480px) /* portrait */"
+    "@phone":      "@media (max-width: 768px) /* phone */"
+    "@mobile":     "@media (max-width: 992px) /* mobile */"
+    "@nondesktop": "@media (max-width: 1200px) /* phone, tablet, laptop */"
+    "@tablet":     "@media (min-width: 769px) /* tablet, desktop */"
+    "@laptop":     "@media (min-width: 993px) /* laptop */"
+    "@desktop":    "@media (min-width: 1201px) /* desktop */"
+
+# ----------------------------------------------------------------------------
+css3:
+
+  formats: [ scss, css, sass, stylus ]
+  snippets:
+    btlr: "border-top-left-radius: {3px};"
+    btrr: "border-top-right-radius: {3px};"
+    bblr: "border-bottom-left-radius: {3px};"
+    bbrr: "border-bottom-right-radius: {3px};"
+
+    btr:  "border-top-left-radius: {!3px}; border-top-right-radius: {!3px};"
+    bbr:  "border-bottom-left-radius: {!3px}; border-bottom-right-radius: {!3px};"
+    blr:  "border-top-left-radius: {!3px}; border-bottom-left-radius: {!3px};"
+    brr:  "border-top-right-radius: {!3px}; border-bottom-right-radius: {!3px};"
+
+    bsb: "box-sizing: border-box;"
+    bsp: "box-sizing: padding-box;"
+
+    tst: "transition: {all} {300ms} {ease};"
+    tra: "transition: {all} {300ms} {ease};"
+    tf: "transform: {scale(1.0)};"
+
+    op: "opacity: {0};"
+
+    us:  "user-select: {none|text|toggle|element|elements|all};"
+    usa: "user-select: all;"
+    ust: "user-select: text;"
+    usn: "user-select: none;"
+
+    an: "animation: {name 300ms linear infinite};"
